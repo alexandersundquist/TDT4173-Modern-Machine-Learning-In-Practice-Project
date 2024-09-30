@@ -8,3 +8,6 @@ __pycache__/
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# ignore training set
+.ais_train.csv
