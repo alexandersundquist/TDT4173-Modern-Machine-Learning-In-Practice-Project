@@ -10,4 +10,4 @@ __pycache__/
 .ipynb_checkpoints/
 
 # ignore training set
-.ais_train.csv
+ais_train.csv
