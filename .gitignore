@@ -1,2 +1,5 @@
 # Ignore the ais_train.csv file
 ais_train.csv
+
+# Ignore the sklern-env directory
+sklearn-env/
