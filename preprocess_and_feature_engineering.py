@@ -36,10 +36,6 @@ def feature_engineering(df_train,df_test):
     data_train = df_train.copy()
     data_test = df_test.copy()
 
-
-    # Preprocess the data
-    data_train,data_test = preprocess(data_train, data_test)
-
     ####### 
     # Create lag features
     #######
@@ -57,8 +53,9 @@ def feature_engineering(df_train,df_test):
     #######
 
     # New feature for if the vessel is moored or not
-    data_train['is_moored'] = data_train['navstat'].apply(lambda x: 1 if x == 5 else 0)
-    data_train.insert(5, 'is_moored', data_train.pop('is_moored'))
+    data_train['not_under_way'] = data_train['navstat'].apply(lambda x: 1 if x == 5 or x == 1 else 0)
+    data_train['under_way'] = data_train['navstat'].apply(lambda x: 1 if x == 0 or x == 8 else 0)
+    #data_train.insert(5, 'is_moored', data_train.pop('is_moored'))
 
     ####### 
     # Create calendar features 
