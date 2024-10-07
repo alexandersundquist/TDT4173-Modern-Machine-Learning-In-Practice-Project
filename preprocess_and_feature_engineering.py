@@ -4,12 +4,13 @@ def preprocess(df_train,df_test):
     data_train = df_train.copy()
     data_test = df_test.copy()
 
-    ####### 
-    # Remove outliers 
+    #######
+    # Format
     #######
 
-    # Remove sog outliers
-    data_train = data_train[data_train['sog'] <= 40]
+    # Format time
+    data_train['time'] = pd.to_datetime(data_train['time'])
+    data_test['time'] = pd.to_datetime(data_test['time'])
 
     ####### 
     # Replace vesselID and portID with integers 
@@ -30,11 +31,25 @@ def preprocess(df_train,df_test):
     # Replace 'portId' column with integer IDs
     data_train['portId'] = pd.factorize(data_train['portId'])[0]
 
+    ####### 
+    # Remove outliers 
+    #######
+
+    # Remove sog outliers
+    data_train = data_train[data_train['sog'] <= 40]
+
     return data_train, data_test
 
 def feature_engineering(df_train,df_test):  
     data_train = df_train.copy()
     data_test = df_test.copy()
+
+    #######
+    # Sort
+    #######
+
+    # Sort by vesselID then time
+    data_train = data_train.sort_values(['vesselId','time'])
 
     ####### 
     # Create lag features
