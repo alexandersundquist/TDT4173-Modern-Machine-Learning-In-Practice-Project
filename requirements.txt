@@ -1,0 +1,8 @@
+pandas==1.5.3
+xgboost==1.6.2
+numpy==1.23.5
+seaborn==0.12.1
+scikit-learn==1.2.2
+matplotlib==3.6.2
+pyproj==3.5.0
+shapely==2.0.1
