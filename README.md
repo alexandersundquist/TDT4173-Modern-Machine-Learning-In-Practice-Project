@@ -1,7 +1,7 @@
 # TDT4173 Modern Machine Learning in Practice Project
 The project aimed to predict the future position of vessels based on time series data.
 
-The main implementation can be found in short_notebook_1.ipynb and short_notebook_2.ipynb and a discussion of the results and the project can be found in report.ipynb.
+The main implementation can be found in short_notebook_1.ipynb and short_notebook_2.ipynb and a discussion of the results and the project can be found in Report.ipynb.
 
 ## Git workflow
 
