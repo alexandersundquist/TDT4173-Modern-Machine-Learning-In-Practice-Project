@@ -1,8 +1,7 @@
-# ML
+# TDT4173 Modern Machine Learning in Practice Project
+The project aimed to predict the future position of vessels based on time series data.
 
-
-
-## Getting started
+## Git workflow
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
